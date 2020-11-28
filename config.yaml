@@ -1,0 +1,42 @@
+# dir / file
+model_dir: ./model
+result_dir: ./result
+result_file: result.csv
+data_dir: ./data/dataset
+pre_data_dir: ./data/pre_data
+
+# machine types need to process
+process_mt_list:
+  - pump
+  - slider
+  - fan
+  - valve
+
+# p_AUC
+max_fpr: 0.1
+
+# feature
+n_mels: 128 # 128
+frames: 5
+n_fft: 1024
+hop_length: 512
+power: 2.0
+
+# train
+epochs: 100
+every_epochs_save: 10
+batch_size: 5000
+lr: 0.001
+cuda: True
+device_ids:
+  - 0
+
+# score_compute
+# mean,max,max_frames_mean,gwrp, gtmean
+pool_type:
+  - mean
+  - max
+gwrp_decay: 0.96
+
+# model
+model_name: AE # AE and IDNN

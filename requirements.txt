@@ -1,0 +1,9 @@
+librosa==0.8.0
+joblib==0.16.0
+tqdm==4.48.2
+torch==1.6.0
+matplotlib==3.2.2
+numpy==1.18.5
+torchsummary==1.5.1
+PyYAML==5.3.1
+scikit_learn==0.23.2
